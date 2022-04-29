@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <package name="com.foxmo.pojo"/>
+    </typeAliases>
+
+    <!--绑定接口-->
+    <mappers>
+        <mapper class="com.foxmo.mapper.BookMapper"></mapper>
+    </mappers>
+</configuration>

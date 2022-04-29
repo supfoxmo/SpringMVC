@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.foxmo.mapper.BookMapper">
+    <select id="selectAllBook" resultType="book">
+        select * from ssmbuild.book
+    </select>
+
+    <select id="selectBookById" resultType="book" parameterType="int">
+        select * from where bookID = #{bookID}
+    </select>
+
+    <delete id="deleteBookById" parameterType="int">
+        delete from books where bookID = #{bookID}
+    </delete>
+
+    <insert id="addBook" parameterType="book">
+        insert into books(bookName,BookCount,detail) values(#{bookName},#{bookCount},#{detail})
+    </insert>
+
+    <update id="updateBook" parameterType="book">
+        update books set bookName = #{bookName},bookCount = #{bookCount},detail = #{detail}
+    </update>
+</mapper>
